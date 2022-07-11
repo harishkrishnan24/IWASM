@@ -10,12 +10,14 @@
 
 <body>
   <script src="/js/loader.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@assemblyscript/loader/umd/index.js"></script>
   <script>
     const WL = new WasmLoader();
     WL.wasm('build/release.wasm')
       .then(instance => {
-        const { minusOne } = instance;
-        document.write(minusOne(44));
+        const { fizzbuzz } = instance;
+        document.write(fizzbuzz(3));
       });
   </script>
 </body>
